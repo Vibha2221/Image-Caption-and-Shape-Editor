@@ -12,7 +12,6 @@
   },
   "dependencies": {
     "fabric": "^4.5.0",
-    "fabricjs-react": "^2.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-hot-toast": "^2.4.1"
