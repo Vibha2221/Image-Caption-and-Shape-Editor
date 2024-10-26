@@ -1,0 +1,173 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+/* Reset some default styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  margin: 0;
+}
+
+/* Main App container */
+.App {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Search Bar styling */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.search-bar input {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+  outline: none;
+}
+
+.search-bar button {
+  padding: 10px 15px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+  font-size: 16px;
+}
+
+.search-bar button:hover {
+  background-color: #357ab7;
+}
+
+/* Image Gallery styling */
+.image-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.image-item {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.image-item img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.image-item button {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.image-item button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Canvas Editor styling */
+.canvas-editor {
+  margin-top: 20px;
+  position: relative;
+}
+/* 
+ .canvas-editor {
+  border: 1px solid black;
+} */
+ 
+
+canvas {
+  width: 580px;  /* Set explicit width */
+  height: 400px; /* Set explicit height */
+  display: block; /* Ensure canvas is displayed */
+  border-radius: 24px;
+}
+/* Control Buttons */
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.controls button {
+  padding: 10px 15px;
+  background-color: #4a90e2;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #357ab7;
+}
+
+.controls button:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(58, 130, 220, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .App {
+    width: 90%;
+  }
+
+  .search-bar input {
+    width: 70%;
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .controls button {
+    width: 100%;
+  }
+}
